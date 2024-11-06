@@ -2,11 +2,62 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiAppHotel.View.Sobre"
-             Title="Sobre">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+             Title="Sobre"
+             NavigationPage.HasNavigationBar="False">
+
+    <VerticalStackLayout VerticalOptions="CenterAndExpand" Padding="10" Spacing="10">
+
+        <!-- Frame para a seção "Sobre o Desenvolvedor" -->
+        <Frame Padding="10" BackgroundColor="{StaticResource Gray100}">
+            <VerticalStackLayout>
+                <Label Text="Sobre o Desenvolvedor:" 
+                   FontSize="Title" 
+                   TextColor="{StaticResource Primary}"
+                   FontFamily="Lato"/>
+
+                <Frame Padding="10" BackgroundColor="{StaticResource PrimaryDark}">
+                    <Label FontFamily="LatoItl"
+                       FontSize="18"
+                       Padding="5"
+                       Text="Meu nome é Arthur, tenho 21 anos e sou apaixonado por tecnologia. Atualmente, curso Análise e Desenvolvimento de Sistemas na ETEC e busco constante aprimoramento para me tornar um profissional qualificado em Tecnologia da Informação."/>
+                </Frame>
+            </VerticalStackLayout>
+        </Frame>
+
+        <Frame></Frame>
+        
+        <!-- Frame para a seção "Sobre o Projeto" -->
+        <Frame Padding="10" BackgroundColor="{StaticResource Gray100}">
+            <VerticalStackLayout>
+                <Label Text="Sobre o Projeto:"
+                   FontSize="Title"
+                   TextColor="{StaticResource Primary}"
+                   FontFamily="Lato"/>
+
+                <Frame Padding="10" BackgroundColor="{StaticResource PrimaryDark}">
+                    <Label FontFamily="LatoItl"
+                       FontSize="15"
+                       Padding="5"
+                       Text="Aplicativo de reservas de hotéis desenvolvido como um projeto do curso de desenvolvimento de sistemas."/>
+                </Frame>
+            </VerticalStackLayout>
+        </Frame>
+
+        <Frame></Frame>
+
+        <HorizontalStackLayout HorizontalOptions="Center">
+            <Button Text="Voltar ao Início" Clicked="OnVoltarButtonClicked" Margin="15"/>
+        </HorizontalStackLayout>
+
+        <Frame></Frame>
+        
+        <Label Text="Desenvolvido em 2024"/>
+
     </VerticalStackLayout>
+
+
+
+
+
+
 </ContentPage>
